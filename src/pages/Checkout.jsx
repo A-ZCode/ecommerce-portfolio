@@ -9,10 +9,9 @@ export default function Checkout() {
   const navigate = useNavigate();
   const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   const shipping = 5.99;
-  const gst = subtotal * 0.1; // 10% GST
+  const gst = subtotal * 0.1;
   const orderTotal = subtotal + shipping + gst;
 
-  // Mock data
   const user = {
     name: "Johnn Maker",
     address: "123 Plae Grond Street\nVermont, California\nUnited States of America"
@@ -20,14 +19,6 @@ export default function Checkout() {
 
   return (
     <div className="bg-gray-100 min-h-screen p-8">
-      {/* Back to Shop Button */}
-      <button 
-        onClick={() => navigate('/')}
-        className="flex items-center text-blue-600 mb-6"
-      >
-        <FiArrowLeft className="mr-2" /> Back to Shop
-      </button>
-
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8">
         {/* LEFT COLUMN - Forms */}
         <div className="lg:w-2/3 space-y-6">
@@ -100,8 +91,8 @@ export default function Checkout() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN - Order Summary */}
-        <div className="lg:w-1/3">
+        {/* RIGHT COLUMN - Order Summary + Back Button */}
+        <div className="lg:w-1/3 space-y-4">
           <div className="bg-white p-6 rounded-lg shadow-sm sticky top-8">
             <h2 className="font-bold text-lg mb-4">Order Summary</h2>
             
@@ -137,6 +128,14 @@ export default function Checkout() {
               Place Your Order
             </button>
           </div>
+
+          {/* Back to Shop Button*/}
+          <button 
+            onClick={() => navigate('/')}
+            className="w-[150px] flex items-center justify-center p-3 text-blue-600 hover:text-white hover:bg-blue-500 rounded-lg transition-all border border-blue-200"
+          >
+            <FiArrowLeft className="mr-2" /> Back to Shop
+          </button>
         </div>
       </div>
     </div>

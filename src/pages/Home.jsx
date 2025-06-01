@@ -14,7 +14,7 @@ import ProductCard from '../components/ProductCard';
 
 export default function Home() {
   return (
-    <div className="pl-6 bg-gray-200 w-[1300px]"> {/* Increased left padding */}
+    <div className="pl-6 bg-gray-200 w-[1300px]"> 
       <div className="grid grid-cols-4 gap-8 p-6">
         {mockProducts.map(product => (
           <ProductCard key={product.id} product={product} />
