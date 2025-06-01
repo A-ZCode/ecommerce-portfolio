@@ -71,7 +71,7 @@ export default function Sidebar() {
         ))}
       </div>
 
-      {/* Logout Button - Now with Click Animation */}
+      {/* Logout Button - with Click Animation */}
       <div className="mb-6">
         <button 
           onClick={handleLogoutClick}

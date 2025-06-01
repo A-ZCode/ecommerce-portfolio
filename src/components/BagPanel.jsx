@@ -26,7 +26,7 @@ export default function BagPanel() {
         )}
       </div>
 
-      {/* Bag Items - Horizontal Layout */}
+      {/* Bag Items */}
       <div className="flex-1 overflow-y-auto p-4 grid grid-cols-3 gap-2">
         {items.length === 0 ? (
           <p className="text-center text-gray-500 py-8 col-span-3">Your bag is empty</p>
