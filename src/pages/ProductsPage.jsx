@@ -1,6 +1,7 @@
 import React from "react";
 import { iphone16pro, iphone11, macbook, watchseries7 } from "../assets";
 
+
 function BagItems () {
 const items = 
   [ {
@@ -52,11 +53,16 @@ return(
             <p className="text-green-600 font-bold">{items.price}</p>
           </div>
           <button className="bg-black-600 text-white">Add to cart</button>
+                  <div className=" h-full ml-2">
+                    <BagPanel />
+                    </div>
           </div>
+          
  ))}
  </div>
 );
 }
+import BagPanel from "../components/BagPanel";
 
 
 export default BagItems;
