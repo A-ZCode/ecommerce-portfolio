@@ -6,9 +6,15 @@ export default function Header() {
   return (
     <header className="bg-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex items-center">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
+          {/* Logo - shown first on mobile */}
+          <div className="text-xl font-bold text-gray-900 w-full md:w-auto md:order-2 text-center md:text-left">
+            {/* Add your logo here */}
+            
+          </div>
+
           {/* Search Section */}
-          <div className="w-[40%]">
+          <div className="w-full md:w-[60%] lg:w-[40%] md:order-1">
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Search Item
             </label>
@@ -25,13 +31,8 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Spacer */}
-          <div className="flex-1" />
-
-          {/* Logo */}
-          <div className="text-xl font-bold text-gray-900">
-            {/* Add your logo here */}
-          </div>
+          {/* Spacer - only on desktop */}
+          <div className="hidden md:block flex-1 md:order-3" />
         </div>
       </div>
     </header>

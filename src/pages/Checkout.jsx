@@ -26,7 +26,7 @@ export default function Checkout() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex justify-between items-center mb-4">
               <h2 className="font-bold text-lg uppercase">Shipping Address</h2>
-              <button className="text-blue-600 flex items-center">
+              <button className="text-black flex items-center">
                 <FiEdit2 className="mr-1" /> Change
               </button>
             </div>
@@ -40,7 +40,7 @@ export default function Checkout() {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <div className="flex justify-between items-center mb-4">
               <h2 className="font-bold text-lg uppercase">Payment Method</h2>
-              <button className="text-blue-600 flex items-center">
+              <button className="text-black flex items-center">
                 <FiEdit2 className="mr-1" /> Change
               </button>
             </div>
@@ -132,7 +132,7 @@ export default function Checkout() {
           {/* Back to Shop Button*/}
           <button 
             onClick={() => navigate('/')}
-            className="w-[150px] flex items-center justify-center p-3 text-blue-600 hover:text-white hover:bg-blue-500 rounded-lg transition-all border border-blue-200"
+            className="w-[150px] flex items-center justify-center p-3 text-black hover:text-black rounded-lg transition-all border border-blue-200"
           >
             <FiArrowLeft className="mr-2" /> Back to Shop
           </button>
