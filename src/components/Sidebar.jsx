@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import { 
-  FiHome, FiShoppingBag, FiMenu, FiLogOut, FiShoppingCart 
-} from 'react-icons/fi';
+import { FiHome, FiShoppingBag, FiMenu, FiLogOut, FiShoppingCart } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 export default function Sidebar() {
   const [activeIcon, setActiveIcon] = useState(null);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const topMenuItems = [
     { 
       name: 'Green Bag', 
       icon: <FiShoppingCart className="text-green-500" />,
-      id: 'green-bag'
+      id: 'green-bag',
+      onClick: () => navigate('/cart') // Temporary: assuming green-bag also goes to cart
     },
     { 
       name: 'Menu', 
@@ -24,12 +25,14 @@ export default function Sidebar() {
     { 
       name: 'Home', 
       icon: <FiHome className="text-black" />,
-      id: 'home'
+      id: 'home',
+      onClick: () => navigate('/')
     },
     { 
       name: 'Bag', 
       icon: <FiShoppingBag className="text-black" />,
-      id: 'black-bag'
+      id: 'black-bag',
+      onClick: () => navigate('/cart')
     }
   ];
 
